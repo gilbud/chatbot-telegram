@@ -1,0 +1,222 @@
+{
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": ["hai", "selamat", "hey", "hallo", "halo", "hi"],
+      "responses": [
+        {
+          "text": "Hai disini Catering Anggur, apakah ada yang bisa dibantu?",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "gedung",
+      "patterns": ["alamat", "wisma anggur", "sewa", "paket gedung"],
+      "responses": [
+        {
+          "text": "Kami menerima sewa gedung dengan paket Wisma Anggur dimulai dari Rp. 12.000.000 di Jl. Anggur V No.11 A, Jajar, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57144.\nMaps: https://maps.app.goo.gl/rZsyUoKb71Wu5eQKA",
+          "image": ["image/12.png"]
+        }
+      ]
+    },
+    {
+      "tag": "lokasi",
+      "patterns": [
+        "lokasi catering anggur",
+        "alamat lengkap",
+        "share location",
+        "tempat",
+        "pengambilan"
+      ],
+      "responses": [
+        {
+          "text": "Jl. Anggur VI No.20, Jajar, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57142.\nMaps: https://maps.app.goo.gl/uchah2Ucp2Ld69jk8",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "sosial media",
+      "patterns": [
+        "ig",
+        "instagram",
+        "hubungi",
+        "kontak",
+        "wa",
+        "whatsapp",
+        "nomor",
+        "nomer"
+      ],
+      "responses": [
+        {
+          "text": "Instagram : @CateringAnggur\nWhatsapp 1 : 08121507788\nWhatsapp 2 : 08122971715\nEmail : anggurcatering@gmail.com",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "acara",
+      "patterns": [
+        "acara",
+        "pernikahan",
+        "makan siang",
+        "arisan",
+        "seminar",
+        "layanan"
+      ],
+      "responses": [
+        {
+          "text": "Kami menerima segala macam pesanan catering untuk berbagai acara, seperti pesta pernikahan, arisan, makan siang, nasi box dan acara lainnya, dan menerima dalam jumlah yang besar.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "payment",
+      "patterns": [
+        "pembayaran",
+        "cicil",
+        "dp",
+        "transfer",
+        "tunai",
+        "uang muka",
+        "lunas"
+      ],
+      "responses": [
+        {
+          "text": "Pembayaran bisa dilakukan melalui transfer atau tunai. Anda dapat membayar uang muka sebesar 50% atau langsung lunas.",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "menu",
+      "patterns": [
+        "daftar menu",
+        "list makanan",
+        "pilihan makanan",
+        "apa menu",
+        "menu"
+      ],
+      "responses": [
+        {
+          "text": "1. Paket Racikan \n2. Paket Prasmanan \n3. Paket Nasi Box\n4. Menu Gubukan\n5. Aneka Snack\n6. Extra Menu\n7. Paket Siraman",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "menu racikan",
+      "patterns": ["paket racikan", "menu racikan", "pilihan racikan", "1"],
+      "responses": [
+        {
+          "text": "Berikut adalah Paket Racikan",
+          "image": ["image/1.png", "image/2.png", "image/3.png", "image/4.png"]
+        }
+      ]
+    },
+    {
+      "tag": "menu prasmanan",
+      "patterns": [
+        "paket prasmanan",
+        "menu prasmanan",
+        "pilihan prasmanan",
+        "2"
+      ],
+      "responses": [
+        {
+          "text": "Berikut adalah Paket Prasmanan",
+          "image": ["image/5.png", "image/6.png", "image/7.png"]
+        }
+      ]
+    },
+    {
+      "tag": "paket nasi box",
+      "patterns": ["menu nasi box", "paket nasi box", "pilihan nasi box", "3"],
+      "responses": [
+        {
+          "text": "Berikut adalah Paket Nasi Box",
+          "image": ["image/8.png"]
+        }
+      ]
+    },
+    {
+      "tag": "menu gubukan",
+      "patterns": ["menu gubukan", "stand", "paket gubukan", "4"],
+      "responses": [
+        {
+          "text": "Berikut adalah Menu Gubukan",
+          "image": ["image/9.png"]
+        }
+      ]
+    },
+    {
+      "tag": "snack",
+      "patterns": ["snack", "snak", "makanan ringan", "camilan", "5"],
+      "responses": [
+        {
+          "text": "Berikut adalah Aneka Snack",
+          "image": ["image/10.png"]
+        }
+      ]
+    },
+    {
+      "tag": "menu extra",
+      "patterns": ["menu tambahan", "menu lain", "daftar extra", "6"],
+      "responses": [
+        {
+          "text": "Berikut adalah Menu Tambahan",
+          "image": ["image/11.png"]
+        }
+      ]
+    },
+    {
+      "tag": "paket siraman",
+      "patterns": ["siraman", "7"],
+      "responses": [
+        {
+          "text": "Berikut adalah Paket Siraman",
+          "image": ["image/13.png"]
+        }
+      ]
+    },
+    {
+      "tag": "pemesanan",
+      "patterns": [
+        "mau pesan",
+        "pemesanan",
+        "booking",
+        "order",
+        "ingin memesan"
+      ],
+      "responses": [
+        {
+          "text": "Untuk Booking dan Pemesanan dapat langsung menghubungi kami melalui Whatsapp",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "lokasi layanan luar kota",
+      "patterns": [
+        "luar kota",
+        "solo",
+        "minimal pesanan",
+        "daerah mana saja",
+        "solobaru",
+        "colomadu",
+        "sragen",
+        "karanganyar",
+        "boyolali",
+        "wonogori"
+      ],
+      "responses": [
+        {
+          "text": "Kami Melayani pesanan hingga keluar kota dengan minimal 300 pesanan",
+          "image": ""
+        }
+      ]
+    }
+  ]
+}
