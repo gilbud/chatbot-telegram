@@ -5,10 +5,12 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters
 import random
 import json
 import torch
+import time  # Import the time module
 
 from model import NeuralNet
 from nltk_utils import tokenize, bag_of_words, stem
 
+# API TELEGRAM
 load_dotenv()
 TOKEN = os.getenv('BOT_TOKEN_API')
 BOT_USERNAME = os.getenv('BOT_USERNAME')
@@ -32,6 +34,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
+# FUNCTION COMMANDS
 async def start_command(update: Update, context):
     await update.message.reply_text('Selamat Datang Di Bot Catering Anggur, Bot ini hanya menyediakan informasi Terkait Catering Anggur, Segala bentuk pemesanan dan pembayaran melaui Whatsapp atau ke Catering Anggur')
 
@@ -41,6 +44,7 @@ async def help_command(update: Update, context):
 async def error(update: Update, context):
     print(f'Update {update} cause error {context.error}')
 
+# SAVE QUESTION AND ANSWER
 def save_interaction_to_json(user_id, question, response):
     filename = 'interactions.json'
     data = {
@@ -60,6 +64,7 @@ def save_interaction_to_json(user_id, question, response):
     with open(filename, 'w') as file:
         json.dump(interactions, file, indent=4)
 
+# NLP
 def handle_response(sentence):
     sentence = tokenize(sentence)
     sentence = [stem(word) for word in sentence]
@@ -86,7 +91,10 @@ def handle_response(sentence):
     else:
         return {'text': 'Maaf, saya tidak mengerti...', 'image': None}
 
+# FUNC HANDLE MESSAGE
 async def handle_message(update: Update, context):
+    start_time = time.time()  # Start time measurement
+    
     message_type = update.message.chat.type
     text = update.message.text
     user_id = update.message.chat.id
@@ -104,8 +112,12 @@ async def handle_message(update: Update, context):
         response = handle_response(text)
         save_interaction_to_json(user_id, text, response['text'])
 
+    end_time = time.time()  # End time measurement
+    response_time = end_time - start_time  # Calculate the response time
+    print('Response time:', response_time, 'seconds')  # Print response time
+
     print('Bot:', response['text'])
-    await update.message.reply_text(response['text'])
+    await update.message.reply_text(f"{response['text']}")
 
     if response['image']:
         for images in response['image']:

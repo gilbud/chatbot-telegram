@@ -12,7 +12,14 @@
     },
     {
       "tag": "gedung",
-      "patterns": ["alamat", "wisma anggur", "sewa", "paket gedung"],
+      "patterns": [
+        "alamat",
+        "wisma anggur",
+        "sewa",
+        "paket gedung",
+        "fasilitas",
+        "menampung"
+      ],
       "responses": [
         {
           "text": "Kami menerima sewa gedung dengan paket Wisma Anggur dimulai dari Rp. 12.000.000 di Jl. Anggur V No.11 A, Jajar, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57144.\nMaps: https://maps.app.goo.gl/rZsyUoKb71Wu5eQKA",
@@ -27,7 +34,8 @@
         "alamat lengkap",
         "share location",
         "tempat",
-        "pengambilan"
+        "pengambilan",
+        "dimana"
       ],
       "responses": [
         {
@@ -92,13 +100,7 @@
     },
     {
       "tag": "menu",
-      "patterns": [
-        "daftar menu",
-        "list makanan",
-        "pilihan makanan",
-        "apa menu",
-        "menu"
-      ],
+      "patterns": ["daftar menu", "list makanan", "pilihan makanan", "menu"],
       "responses": [
         {
           "text": "1. Paket Racikan \n2. Paket Prasmanan \n3. Paket Nasi Box\n4. Menu Gubukan\n5. Aneka Snack\n6. Extra Menu\n7. Paket Siraman",
@@ -163,7 +165,14 @@
     },
     {
       "tag": "menu extra",
-      "patterns": ["menu tambahan", "menu lain", "daftar extra", "6"],
+      "patterns": [
+        "menu tambahan",
+        "menu lain",
+        "daftar extra",
+        "6",
+        "kue ulang tahun",
+        "tart"
+      ],
       "responses": [
         {
           "text": "Berikut adalah Menu Tambahan",
@@ -192,7 +201,50 @@
       ],
       "responses": [
         {
-          "text": "Untuk Booking dan Pemesanan dapat langsung menghubungi kami melalui Whatsapp",
+          "text": "Untuk Pemesanan dan reservasi dapat langsung menghubungi kami melalui Whatsapp. \n*Sewa gedung minimal satu bulan sebelum acara",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "buka",
+      "patterns": [
+        "jam kerja",
+        "operasional",
+        "tutup",
+        "waktu buka",
+        "jam berapa"
+      ],
+      "responses": [
+        {
+          "text": "Kami buka setiap hari mulai pukul 08.00 hingga 20.00 ",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "pembatalan pesanan",
+      "patterns": [
+        "batal",
+        "cancel pesanan",
+        "batalkan",
+        "hapus",
+        "dibatalkan",
+        "membatalkan"
+      ],
+      "responses": [
+        {
+          "text": "Untuk pembatalan pesanan dan pergantian tanggal acara diusahakan minimal H-7 hari. \n*Uang DP tidak bisa dikembalikan jika melakukan pembatalan pesanan ",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "tag": "diskon",
+      "patterns": ["potongan harga", "diskon", "pengurangan", "murah"],
+      "responses": [
+        {
+          "text": "Kami memberikan diskon hingga 10%, dengan pembelian diatas Rp. 10.000.000,-",
           "image": ""
         }
       ]
@@ -203,17 +255,19 @@
         "luar kota",
         "solo",
         "minimal pesanan",
-        "daerah mana saja",
+        "daerah",
         "solobaru",
         "colomadu",
         "sragen",
         "karanganyar",
         "boyolali",
-        "wonogori"
+        "wonogori",
+        "kirim",
+        "pengiriman"
       ],
       "responses": [
         {
-          "text": "Kami Melayani pesanan hingga keluar kota dengan minimal 300 pesanan",
+          "text": "Kami Melayani pesanan hingga SeKaresidenan Surakarta. \n Minimal 100 untuk dalam kota dan 300 untuk luar kota Solo",
           "image": ""
         }
       ]
